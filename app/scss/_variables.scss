@@ -1,0 +1,63 @@
+/* Solarized Colors */
+
+$lightgray: #819090;
+$gray: #708284;
+$mediumgray: #536870;
+$darkgray: #475B62;
+$darkblue: #0A2933;
+$darkerblue: #042029;
+$paleryellow: #FCF4DC;
+$paleyellow: #EAE3CB;
+$yellow: #A57706;
+$orange: #BD3613;
+$red: #D11C24;
+$pink: #C61C6F;
+$purple: #595AB7;
+$blue: #2176C7;
+$cyan: #259286;
+$green: #738A05;
+// Fakebook colors
+
+$fbBlue :#3b5998;
+//theme Colors
+
+
+// Gray and Brand Colors for use across theme
+
+$theme-primary:    #2C3E50;
+$theme-success:    #042029;
+
+$gray-base:        #000;
+$gray-darker:      lighten($gray-base, 13.5%); // #222
+$gray-dark:        lighten($gray-base, 20%);   // #333
+$gray:             lighten($gray-base, 33.5%); // #555
+$gray-light:       lighten($gray-base, 46.7%); // #777
+$gray-lighter:     lighten($gray-base, 93.5%); // #eee
+
+
+
+/* Colors from Liverpool */
+
+$liverpoolBlue:#083B82;
+
+
+/*Material Colors*/
+$indigo: #3F51B5;
+$orange:#EF6C00;
+$blue:#2196F3;
+$gray:#333;
+
+
+/*Dimensions*/
+$thumbSize:75px;
+$profileImg:125px;
+$itemWidth:200px;
+
+
+/* Google Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400,700,400italic,700italic|Arvo:700|Fjalla+One);
+
+$lato: 'Lato', sans-serif;
+$fjalla:'Fjalla One', sans-serif;
+$arvo: 'Arvo', serif;
