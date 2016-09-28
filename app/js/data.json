@@ -1,172 +1,42 @@
 {
     "items": [{
-        "id": "g1",
-        "images": "images/students.png",
-        "title": "Students",
-        "target": "#students",
-        "value": "5549",
-        "itemImage": "students"
-    }, {
         "id": "g2",
-        "itemImage": "mclass",
+        "itemImage": "arson_1",
         "title": "Median Class Size",
-        "value": "28",
-        "target":"#mclass"
-    }, {
-        "id": "g3",
-        "itemImage": "grates",
-        "target":"#grates",
-        "title": "Graduation Rates",
-        "value": "65%"
-    }, {
-        "id": "g4",
-        "itemImage": "teacher",
-        "title": "Teachers",
-        "value": "193",
-        "target":"#teachers"
-    }, {
-        "id": "g5",
-        "itemImage": "smobility",
-        "title": "Student Mobility",
-        "value": "18.5%",
-        "target":"#smobility"
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
+        "referenceID":"WAL_EDUC6610_02_C_EN"
+    } ,
+    {
+        "id": "g2",
+        "itemImage": "27",
+        "title": "Median Class Size",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
+        "referenceID":"WAL_EDUC8341_02_E_EN"
+    } ,
+    {
+        "id": "g2",
+        "itemImage": "30",
+        "title": "Median Class Size",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
+        "referenceID":"WAL_EDUC8341_02_D_EN"
+    },
+    {
+        "id": "g2",
+        "itemImage": "30",
+        "title": "Median Class Size",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
+        "referenceID":"WAL_EDUC8341_02_D_EN"
+    },
+    {
+        "id": "g2",
+        "itemImage": "30",
+        "title": "Median Class Size",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
+        "referenceID":"WAL_EDUC8341_02_D_EN"
+    }
 
-    }, {
-        "id": "g6",
-        "itemImage": "attendance",
-        "title": "Attendance",
-        "value": "81.4%",
-        "target":"#attendance"
-    }, {
-        "id": "g7",
-        "itemImage": "ppspending",
-        "title": "Per Pupil Spending",
-        "value": "$9,965",
-        "target":"#ppspending"
-    }, {
-        "id": "g8",
-        "itemImage": "oreferrals",
-        "title": "Office Referrals ",
-        "value": "867",
-        "target":"#oreferrals"
+  ]
 
-    }, {
-        "id": "g9",
-        "itemImage": "suspensions",
-        "title": "Suspensions",
-        "value": "394",
-        "target":"#suspensions"
-    }, {
-        "id": "g10",
-        "itemImage": "stest",
-        "title": "State Test",
-        "value": "22.3%",
-        "target":"#stest"
-    }],
-    "modals": [{
-            "title": "Students",
-            "id": "students",
-            "images": [
-              {"image": "s1"},
-              {  "image": "s2"},
-              {"image": "s3" }
-            ]
-        },
-        {
-                "title": "Median Class Size",
-                "id": "mclass",
-                "images": [
-                  {"image": "mclass1"},
-                  {  "image": "mclass2"},
-                  {"image": "mclass3" }
-                ]
-            },
-            {
-                    "title": "Graduation Rates",
-                    "id": "grates",
-                    "images": [
-                      {"image": "grates1"},
-                      {"image": "grates2"},
-                      {"image": "grates3" }
-                    ]
-                },
-                {
-                        "title": "Teachers",
-                        "id": "teachers",
-                        "images": [
-                          {"image": "teachers1"},
-                          {"image": "teachers2"},
-                          {"image": "teachers3" },
-                          {"image": "teachers4" }
-                        ]
-                    },
-                    {
-                            "title": "Student Mobility",
-                            "id": "smobility",
-                            "content":"A District’s Student Mobility rate is the percentage of students who transfer in or out of the District between the first school day of October and the last school day of the year, not including graduates.  ",
-                            "content1":"A District’s Three Year Student Mobility rate is the percentage of students who transfer in or out of the District between the first school day of October during year one and the last school day of the year during year three, not including graduates.",
-                            "images": [
-                              {"image": "smobility1"}
-                            ],
-                            "images1": [
-                              {"image": "smobility2"}
-                            ]
-                        },
-                        {
-                                "title": "Attendance",
-                                "id": "attendance",
-                                "images": [
-                                  {"image": "attendance1"},
-                                  {"image": "attendance2"},
-                                  {"image": "attendance3" }
-
-                                ]
-                            },
-              {
-                      "title": "Per Pupil Spending",
-                      "id": "ppspending",
-                      "content1":"The State quality education model (QEM) suggests adequate perpupil funding should be $12,035.",
-                      "images": [
-                        {"image": "ppspending1"}
-                      ],
-                      "images1": [
-                        {"image": "ppspending2"}
-                      ]
-                  },
-                  {
-                          "title": "Office Referrals",
-                          "id": "oreferrals",
-                          "images": [
-                            {"image": "oreferrals1"},
-                            {"image": "oreferrals2"},
-                            {"image": "oreferrals3" }
-                          ]
-                      },
-                      {
-                              "title": "Suspensions",
-                              "id": "suspensions",
-                              "images": [
-                                {"image": "suspensions1"},
-                                {"image": "suspensions2"}
-
-                              ]
-                          },
-                          {
-                                  "title": "State Test",
-                                  "id": "stest",
-                                  "images": [
-                                    {"image": "stest1"},
-                                    {"image": "stest2"}
-
-                                  ]
-                              }
-
-
-
-
-
-
-    ]
 
 
 }

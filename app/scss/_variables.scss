@@ -19,20 +19,7 @@ $green: #738A05;
 // Fakebook colors
 
 $fbBlue :#3b5998;
-//theme Colors
 
-
-// Gray and Brand Colors for use across theme
-
-$theme-primary:    #2C3E50;
-$theme-success:    #042029;
-
-$gray-base:        #000;
-$gray-darker:      lighten($gray-base, 13.5%); // #222
-$gray-dark:        lighten($gray-base, 20%);   // #333
-$gray:             lighten($gray-base, 33.5%); // #555
-$gray-light:       lighten($gray-base, 46.7%); // #777
-$gray-lighter:     lighten($gray-base, 93.5%); // #eee
 
 
 
@@ -56,8 +43,10 @@ $itemWidth:200px;
 
 /* Google Fonts */
 
-@import url(https://fonts.googleapis.com/css?family=Lato:100,400,700,400italic,700italic|Arvo:700|Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,700,400italic,700italic|Arvo:700|Fjalla+One);
 
 $lato: 'Lato', sans-serif;
 $fjalla:'Fjalla One', sans-serif;
 $arvo: 'Arvo', serif;
+//scrub bd-pageheader
+$seekBarH:1.5rem;
