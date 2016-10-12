@@ -6089,17 +6089,21 @@ body {
 }
 
 /* Large Devices, Wide Screens */
+body {
+  background-color: #eceff1;
+}
+
 .bd-pageheader {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  margin-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   text-align: left;
   background: url("../images/arson_bg.jpg");
   background-size: cover;
 }
 
 .mainTitle {
-  color: #0A2933 !important;
+  color: white !important;
   font-family: "Fjalla One", sans-serif;
 }
 
@@ -6178,48 +6182,19 @@ p {
   left: 15px;
 }
 
-.mainContainer {
-  background-color: white;
-  padding-top: 10px;
+.bd-pageheader {
+  color: white;
 }
-
-.commentThumb {
-  width: 75px;
-  height: 75px;
-  -webkit-box-shadow: 3px 6px 13px -5px rgba(0, 0, 0, 0.51);
-  -moz-box-shadow: 3px 6px 13px -5px rgba(0, 0, 0, 0.51);
-  box-shadow: 3px 6px 13px -5px rgba(0, 0, 0, 0.51);
-}
-
-.mainBlock {
-  background: white;
-}
-
-.media__main {
-  background: #fbfbfb;
-}
-
-.trick {
-  padding: 15px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
+.bd-pageheader h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
 }
 
 /* item is invisible, but used for layout */
 .grid-item,
 .grid-item-content {
   height: 200px;
-}
-
-.hidePlayer {
-  opacity: 0.0;
-  pointer-events: none;
 }
 
 /* item-content is visible, and transitions size */
@@ -6281,23 +6256,31 @@ body {
   min-height: 400px;
 }
 
-figure {
+/* Common style */
+.grid figure {
+  position: relative;
+  float: left;
   overflow: hidden;
   height: auto;
-  cursor: pointer;
-  min-height: 350px;
+  height: 450px;
+  background: #3085a3;
+  text-align: center;
 }
 
-figure img {
+.grid figure img {
   position: relative;
   display: block;
-  min-height: 150%;
-  max-width: 500%;
+  min-height: 100%;
+  max-width: 100%;
   opacity: 0.8;
-  pointer-events: none;
+  object-fit: cover;
+}
+.grid figure img _:-ms-lang(x), .grid figure img img {
+  height: 100%;
+  width: 100%;
 }
 
-figure figcaption {
+.grid figure figcaption {
   padding: 2em;
   color: #fff;
   text-transform: uppercase;
@@ -6306,13 +6289,13 @@ figure figcaption {
   backface-visibility: hidden;
 }
 
-figure figcaption::before,
-figure figcaption::after {
+.grid figure figcaption::before,
+.grid figure figcaption::after {
   pointer-events: none;
 }
 
-figure figcaption,
-figure figcaption > a {
+.grid figure figcaption,
+.grid figure figcaption > a {
   position: absolute;
   top: 0;
   left: 0;
@@ -6322,7 +6305,7 @@ figure figcaption > a {
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-figure figcaption > a {
+.grid figure figcaption > a {
   z-index: 1000;
   text-indent: 200%;
   white-space: nowrap;
@@ -6330,92 +6313,138 @@ figure figcaption > a {
   opacity: 0;
 }
 
-figure h2 {
+.grid figure h2 {
   word-spacing: -0.15em;
   font-weight: 300;
-  pointer-events: none;
 }
 
-figure h2 span {
+.grid figure h2 span {
   font-weight: 800;
-  pointer-events: none;
 }
 
-figure h2,
-figure p {
+.grid figure h2,
+.grid figure p {
   margin: 0;
-  pointer-events: none;
 }
 
-figure p {
+.grid figure p {
   letter-spacing: 1px;
   font-size: 68.5%;
 }
 
-/*---------------*/
-/***** Duke *****/
-/*---------------*/
-figure.effect-duke {
-  background: -webkit-linear-gradient(-45deg, #34495e 0%, #cc6055 100%);
-  background: linear-gradient(-45deg, #34495e 0%, #cc6055 100%);
+/***kira efetc // has buttons
+
+/*-----------------*/
+/***** Kira *****/
+/*-----------------*/
+figure.effect-kira {
+  background: #0A2933;
+  text-align: left;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+figure.effect-kira blockquote {
+  margin: 15px 0;
+  text-transform: none;
+  font-size: 1rem;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  opacity: 0;
+  transform: translate3d(0, -25px, 0);
 }
 
-figure.effect-duke img,
-figure.effect-duke p {
-  pointer-events: none;
+figure.effect-kira img {
+  opacity: .3;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-duke:hover img {
-  opacity: 0.1;
-  pointer-events: none;
-  -webkit-transform: scale3d(2, 2, 1);
-  transform: scale3d(2, 2, 1);
+figure.effect-kira figcaption {
+  z-index: 1;
 }
 
-figure.effect-duke h2 {
-  pointer-events: none;
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-  -webkit-transform: scale3d(0.8, 0.8, 1);
-  transform: scale3d(0.8, 0.8, 1);
-  -webkit-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-}
-
-figure.effect-duke p {
+figure.effect-kira p {
+  padding: 2.25em 3rem;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.5;
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 20px;
-  padding: 30px;
-  text-transform: none;
-  font-size: 90%;
-  opacity: 0;
-  -webkit-transform: scale3d(0.8, 0.8, 1);
-  transform: scale3d(0.8, 0.8, 1);
-  -webkit-transform-origin: 50% -100%;
-  transform-origin: 50% -100%;
 }
 
-figure.effect-duke:hover h2,
-figure.effect-duke:hover p {
-  opacity: 1;
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
+figure.effect-kira p a {
+  margin: 0 0.5em;
+  color: white;
+  font-size: 1.5rem;
+}
+figure.effect-kira p a span {
+  font-size: .5rem;
+  line-height: 1.5rem;
+  display: none;
 }
 
-.selected figure.effect-duke img {
-  opacity: 0.1;
-  pointer-events: none;
-  -webkit-transform: scale3d(2, 2, 1);
-  transform: scale3d(2, 2, 1);
+figure.effect-kira p a:hover,
+figure.effect-kira p a:focus {
+  opacity: 0.8;
+  color: white;
 }
-.selected figure.effect-duke h2,
-.selected figure.effect-duke p {
+
+figure.effect-kira:hover img {
+  opacity: 0.8;
+}
+
+figure.effect-kira:hover blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+figure.effect-kira:hover p {
   opacity: 1;
-  pointer-events: none;
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
+}
+
+.kal-group {
+  height: 0px;
+  opacity: 1;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.kal-group__on {
+  opacity: 1;
+  height: 350px;
+}
+
+.clickFigure {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  background-image: url("../images/play_pause.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  -webkit-transition: background-position .1s ease-in;
+  -moz-transition: background-position .1s ease-in;
+  transition: background-position .1s ease-in;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.clicked {
+  background-position: top;
+}
+
+figure.active img {
+  opacity: 0.6;
+}
+figure.active blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }

@@ -1,13 +1,19 @@
+body {
+  background-color: $md-blue-grey-50;
+}
+
+
 .bd-pageheader {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    margin-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     text-align: left;
     background: url("../images/arson_bg.jpg");
     background-size: cover;
+    //min-height: 350px;
 }
 .mainTitle {
-    color: $darkblue!important;
+    color:white!important;
     font-family: $fjalla;
 }
 .headerContent {
@@ -74,6 +80,4 @@ p {
     left: 15px;
 }
 .mainContainer {
-  background-color: white;
-  padding-top: 10px;
 }

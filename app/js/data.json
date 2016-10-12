@@ -1,39 +1,55 @@
 {
     "items": [{
-        "id": "g2",
+        "id": "g1",
+        "index":"01.",
         "itemImage": "arson_1",
         "title": "Median Class Size",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
-        "referenceID":"WAL_EDUC6610_02_C_EN"
+        "referenceID":"WAL/EDUC/6610/WAL_EDUC6610_02_C_EN",
+        "assets":"/WAL/EDUC/6610/02/WAL_EDUC6610_02_C_EN"
+
     } ,
     {
         "id": "g2",
+        "index":"02.",
         "itemImage": "27",
         "title": "Median Class Size",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
-        "referenceID":"WAL_EDUC8341_02_E_EN"
+        "referenceID":"WAL/HUMN/8152B/WAL_HUMN8152B_02_B_EN",
+        "assets":"WAL/HUMN/8152B/02/WAL_HUMN8152B_02_B_EN"
+
     } ,
     {
-        "id": "g2",
+        "id": "g3",
+        "index":"03.",
         "itemImage": "30",
         "title": "Median Class Size",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
-        "referenceID":"WAL_EDUC8341_02_D_EN"
+        "referenceID":"WAL/HUMN/8152B/WAL_HUMN8152B_02_D_EN",
+        "assets":"WAL/HUMN/8152B/02/WAL_HUMN8152B_02_D_EN"
     },
+
     {
-        "id": "g2",
+        "id": "g4",
+        "index":"03.",
         "itemImage": "30",
         "title": "Median Class Size",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
-        "referenceID":"WAL_EDUC8341_02_D_EN"
+        "referenceID":"WAL/HUMN/8152B/WAL_HUMN8152B_02_F_EN",
+        "assets":"WAL/HUMN/8152B/02/WAL_HUMN8152B_02_F_EN"
     },
+
     {
-        "id": "g2",
+        "id": "g4",
+        "index":"03.",
         "itemImage": "30",
         "title": "Median Class Size",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
-        "referenceID":"WAL_EDUC8341_02_D_EN"
+        "referenceID":"WAL/HUMN/8152B/WAL_HUMN8152B_02_B_EN",
+        "assets":"WAL/HUMN/8152B/02/WAL_HUMN8152B_02_B_EN"
     }
+
+
 
   ]
 

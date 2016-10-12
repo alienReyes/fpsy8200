@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
-    <title>Report Card</title>
+    <title>Podcasts Repository</title>
 
 
 
@@ -21,7 +21,7 @@
 <body>
 
 
-  <nav class="navbar-fixed-top  navbar-dark bg-inverse">
+  <nav class="audioPlayer navbar-fixed-top  navbar-dark bg-inverse">
 
     <div class="container-fluid">
     <div class="row">
@@ -32,12 +32,15 @@
 </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
-        <a id="playBtn" href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
-        <!-- <a id="pauseBtn" href="#"><i class="fa fa-pause" aria-hidden="true"></i></a> -->
+      <div class="col-md-4">
+        <a id="playBtn" href="#">
+          <span class="pause"></span>
+          <span class="play"></span>
+        </a>
       </div>
-
-
+      <div class="col-md-12 videotitle">
+        <h1 id="vidTitle"></h1>
+      </div>
     </div>
     </div>
   </div>
@@ -46,12 +49,33 @@
 
   <div class="bd-pageheader">
         <div class="container">
-    <h1>Components</h1>
-    <p class="lead">
-      Over a dozen reusable components built to provide buttons, dropdowns, input groups, navigation, alerts, and much more.
-    </p>
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <h1>Title of the adventure</h1>
+              <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim distinctio quasi reiciendis odio, dignissimos, consectetur temporibus itaque, sequi incidunt quos corrupti facere! Facere, facilis? Est perferendis iure numquam debitis dignissimos?
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
+
+<div class="container">
+  <div class="row videoContainer">
+    <div class=" col-md-8 offset-md-2" style="">
+                              <div class="videoInfo" style="">
+                              </div>
+                              <div class="kal-group" data-name="WAL/CBLD/0001/WAL_CBLD0001_01_A_EN" style="height:300px; width:100%;">
+                              </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
 
 
 
@@ -71,12 +95,6 @@
 
 <!-- Modal -->
 <!-- //hiden kaltura player -->
-<div class="hidePlayer">
-  <div id="vidContainer" data-name="WAL/ACCT/0000/WAL_ACCT0000_01_A_EN" class="kal-group" style="width:600px;">
-        <div id="videoPlayer" class="player"></div>
-        <div class="controls"></div>
-    </div>
-</div>
 
 
     <!--build:js js/main.min.js -->
@@ -86,72 +104,63 @@
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../bower_components/mustache.js/mustache.js"></script>
     <!-- endbower -->
-    <script type="text/javascript" src="http://kalmedia.laureate.net/emb/player/js/kaltura-custom.js" data-skin-name="mia"></script>
+    <script src="js/kaltura-custom.js" data-skin-name="walden"></script>
     <script src="js/main.js"></script>
     <!-- endbuild -->
 
-    <script id="gridTemplate" type="text/template">
-        <div class="grid-item col-md-4" data-toggle="modal" data-target={{target}} >
-            <div class="grid-item-content">
-                <img src="images/{{itemImage}}.png" alt="" width="100" height="100">
-                <h6 class="">{{title}}</h6>
-        <p class="dataValue">{{value}}</p>
-      </div>
-    </div>
-</script>
 
 
-
-<script id="figureTemplate">
+<script id="figureTemplate" type="text/template">
 <div class="col-md-4">
-  <figure class="effect-duke" >
+  <figure class="effect-duke">
               <img src="images/{{itemImage}}.jpg" alt="img27"/>
               <figcaption>
                 <h2>{{title}}<span>Duke</span></h2>
                 <p>{{description}}</p>
-                <a class="clickFigure"  data-target={{referenceID}}  href="#">View more</a>
+
+                <ul>
+                  <li><a class="audio" href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}-DL.zip">test audio</a></li>
+                  <li><a href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}-CC.zip">captions</a></li>
+                </ul>
+                <a class="clickFigure"  data-target={{referenceID}} data-title={{title}}  href="#">View more</a>
               </figcaption>
   </figure>
   </div>
 </script>
 
 
+<script id="templateBtns" type="text/template">
+<div class="col-lg-4 col-md-6">
+  <figure class="effect-kira">
 
-<script id="modalTemplate" type="text/template">
-  <div class="modal fade" id={{id}} tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
-        </div>
-        <div class="modal-body">
-          <p>{{content}}</p>
-          <div class="imgContainer">
-            {{#images}}
-  <img class="img-fluid" src="images/{{image}}.png" alt="">
-{{/images}}
-          </div>
-            <p>{{content1}}</p>
+    <img src="images/{{itemImage}}.jpg" alt="img27"/>
+    <figcaption>
+      <h2><span>{{index}}</span>{{title}} </h2>
+      <blockquote>{{description}}</blockquote>
 
-              {{#images1}}
-    <img class="img-fluid" src="images/{{image}}.png" alt="">
-  {{/images1}}
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  </script>
+        <div class="clickFigure"  data-target={{referenceID}} data-title={{title}} href="#"></div>
+      <p>
+        <a data-toggle="tooltip" data-placement="bottom" title="Download Audio" target="_blank" href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}-DL.zip"><i class="fa fa-fw fa fa-download"></i><span>Download Audio</span></a>
+        <a data-toggle="tooltip" data-placement="bottom" title="Download Transcripts" target="_blank" href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}.pdf"><i class="fa fa-fw fa-file-text"></i></a>
 
-<script id="imgTemplate" type="text/template">
-  <img class="img-fluid" src="images/{{image}}.png" alt="">
-
+      </p>
+    </figcaption>
+  </figure>
+</div>
 </script>
+
+<a id="url" target="_blank"
+
+
+
+
+
+
+
+
+
+
+
 
 
 
