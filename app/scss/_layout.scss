@@ -3,12 +3,18 @@ body {
 }
 
 
+
+#home {
+
+}
+
+
 .bd-pageheader {
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     text-align: left;
-    background: url("../images/arson_bg.jpg");
+    background-color:$darkerblue;
     background-size: cover;
     //min-height: 350px;
 }

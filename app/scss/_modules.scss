@@ -105,8 +105,8 @@ span {
 	// max-height: 360px;
 //	width: 48%;
 	height: auto;
-  height:450px;
-	background: #3085a3;
+  height:400px;
+	background: $darkerblue;
 	text-align: center;
 }
 
@@ -195,7 +195,9 @@ figure.effect-kira {
 	transform: translate3d(0,0,0);
 
   blockquote {
-    margin: 15px 0;
+    padding: 10px;
+    color:white;
+    margin: 10px 0;
      text-transform: none;
      font-size: 1rem;
      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -218,7 +220,7 @@ figure.effect-kira figcaption {
 }
 
 figure.effect-kira p {
-	padding: 2.25em 3rem;
+	padding: 2em 3rem;
 	font-weight: 600;
 	font-size: 3rem;
 	line-height: 1.5;
@@ -257,7 +259,7 @@ figure.effect-kira p a:focus {
 
 
 figure.effect-kira:hover img {
-	opacity: 0.8;
+	opacity: 0.5;
 
 }
 
@@ -314,7 +316,7 @@ figure.active   {
 
 
   img {
-    	opacity: 0.6;
+    	opacity: 0.5;
   }
   blockquote {
    opacity:0.8;
@@ -323,3 +325,87 @@ figure.active   {
  }
 
 }
+//grid home
+
+.grid--home {
+    figure {
+      position: relative;
+      float: left;
+      overflow: hidden;
+      height: auto;
+      height:350px;
+    	background: $darkerblue;
+    	text-align: center;
+      img {
+        position: relative;
+        display: block;
+        min-height: 100%;
+        max-width: 100%;
+        opacity: 1;
+        -webkit-transition: opacity 0.35s,-webkit-transform 0.35s ;
+        transition: opacity 0.35s, transform 0.35s;
+        object-fit: cover;
+        _:-ms-lang(x), img {
+                      height:100%;
+                      width:100%;
+                 }
+      }
+      figcaption {
+
+      p {
+        color:white;
+        margin: 35px 0;
+        padding: 10px;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+       transition: opacity 0.35s, transform 0.5s;
+        opacity: 0;
+        transform: translate3d(0,25px,0);
+        span {
+          font-size: 1.6rem;
+        	font-weight: 800;
+        }
+      }
+
+        h2  {
+          text-transform: uppercase;
+        }
+      	padding: 2em;
+      	color: #fff;
+      	font-size: 1.25em;
+      	-webkit-backface-visibility: hidden;
+      	backface-visibility: hidden;
+        text-align: left;
+      }
+    figcaption::before,
+    figcaption::after {
+      	pointer-events: none;
+      }
+      figcaption,
+      figcaption > a {
+      	position: absolute;
+      	top: 0;
+      	left: 0;
+      	width: 100%;
+      	height: 100%;
+      }
+      figcaption > a {
+      	z-index: 1000;
+      	text-indent: 200%;
+      	white-space: nowrap;
+      	font-size: 0;
+      	opacity: 0;
+      }
+      &:hover {
+        p {
+          opacity:1;
+          -webkit-transform: translate3d(0,0,0);
+        	transform: translate3d(0,0,0);
+        }
+
+        img {
+          opacity: .5;
+        }
+      }
+      }
+
+    }

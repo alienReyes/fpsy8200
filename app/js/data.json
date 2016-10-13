@@ -1,4 +1,48 @@
 {
+
+    "episodeList":[
+      {
+        "title":"Episode 1",
+        "count":"1",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales",
+        "image":"episode1",
+        "episodeTgt":"episode1"
+      },
+      {
+        "title":"Episode 2",
+        "count":"2",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales",
+        "image":"episode1",
+        "episodeTgt":"episode2"
+      },
+      {
+        "title":"Episode 3",
+        "count":"3",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales",
+        "image":"episode1",
+        "episodeTgt":"episode3"
+      },
+      {
+        "title":"Episode 4",
+        "count":"4",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales",
+        "image":"episode1",
+        "episodeTgt":"episode4"
+      },
+      {
+        "title":"Episode 5",
+        "count":"5",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales",
+        "image":"episode1",
+        "episodeTgt":"episode4"
+      }
+    ],
+
+
+
+
+
+
     "items": [{
         "id": "g1",
         "index":"01.",
@@ -7,7 +51,6 @@
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
         "referenceID":"WAL/EDUC/6610/WAL_EDUC6610_02_C_EN",
         "assets":"/WAL/EDUC/6610/02/WAL_EDUC6610_02_C_EN"
-
     } ,
     {
         "id": "g2",
@@ -17,7 +60,6 @@
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
         "referenceID":"WAL/HUMN/8152B/WAL_HUMN8152B_02_B_EN",
         "assets":"WAL/HUMN/8152B/02/WAL_HUMN8152B_02_B_EN"
-
     } ,
     {
         "id": "g3",
@@ -27,7 +69,7 @@
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
         "referenceID":"WAL/HUMN/8152B/WAL_HUMN8152B_02_D_EN",
         "assets":"WAL/HUMN/8152B/02/WAL_HUMN8152B_02_D_EN"
-    },
+          },
 
     {
         "id": "g4",
@@ -37,7 +79,7 @@
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec magna vitae lorem sodales eleifend id sed dolor.",
         "referenceID":"WAL/HUMN/8152B/WAL_HUMN8152B_02_F_EN",
         "assets":"WAL/HUMN/8152B/02/WAL_HUMN8152B_02_F_EN"
-    },
+          },
 
     {
         "id": "g4",

@@ -11,6 +11,7 @@ function jsCallbackReady(objectId) {
     console.log(objectId + " is ready!!");
     window.kdp = document.getElementById(objectId);
 
+
     kdp.kBind("mediaReady.init", function() {
         $('.totalTime').text(timeConversion(kdp.evaluate("{mediaProxy.entry.duration}")));
         console.log("duration ready: " + kdp.evaluate("{mediaProxy.entry.duration}"));
@@ -28,16 +29,23 @@ function jsCallbackReady(objectId) {
 $(document).ready(function() {
   $('.videoContainer').hide();
     $('.audioPlayer').hide();
-    $.getJSON('js/data.json', function(data) {
-        var template = document.getElementById('templateBtns').innerHTML;
+    $.getJSON('js/'+jsonFile, function(data) {
+      if (fileName =="home") {
+        var template = document.getElementById('episodesTemplate').innerHTML;
+          var html = Mustache.to_html(template, data);
+          $('.grid--home').append(html);
+      }
+      else{
+            console.log (data.items+"<< grid 2")
+        var template2 = document.getElementById('templateBtns').innerHTML;
+
         $.each(data.items, function(i, item) {
-            var html = Mustache.to_html(template, item);
+            var html = Mustache.to_html(template2, item);
               var fPath=cdnBasePath+item.referenceID +".json"
             $('.grid').append(html);
         });
-
-
-    });
+      }
+       });
 
 
 
