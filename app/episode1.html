@@ -1,15 +1,12 @@
 <!-- <!DOCTYPE html> -->
-<html id="home" lang="en">
+<html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
     <title>Podcasts Repository</title>
-  <script type="text/javascript">
-    var fileName="home";
-    var jsonFile="data.json"
-  </script>
+
 
 
 
@@ -19,32 +16,78 @@
     <!-- endbower -->
     <link rel="stylesheet" href="css/style.css">
     <!--endbuild-->
+
+    <script type="text/javascript">
+      var fileName="episodes";
+      var episodeNum="episode1"
+
+    </script>
 </head>
 
-<body>
+<body id="episode1">
 
 
+  <nav class="audioPlayer navbar-fixed-top  navbar-dark bg-inverse">
+
+    <div class="container-fluid">
+    <div class="row">
+      <div class="progressBar seekBar">
+    <div class="timeBar"></div>
+    <span class="currentTime"></span>
+    <span class="totalTime"></span>
+</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <a id="playBtn" href="#">
+          <span class="pause"></span>
+          <span class="play"></span>
+        </a>
+      </div>
+      <div class="col-md-12 videotitle">
+        <h1 id="vidTitle"></h1>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  </nav>
 
   <div class="bd-pageheader">
         <div class="container">
           <div class="row">
             <div class="col-md-8 offset-md-2">
-              <h1>Podcast Repositorie list of episodes</h1>
+              <h1>DEATH IN THE FAMILY</h1>
               <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim suscipit assumenda voluptatibus omnis iste ratione perferendis, repellendus, commodi iusto consequatur voluptatem tenetur, quaerat! Eos maiores aut nemo beatae, laboriosam voluptates.
+              Scott Moyer is a 38-years old sales representative for a manufacturing company. He lives with his wife Andrea and their two sons, Connor and Tyler. Scott’s performance at work has been decreasing over the past several months. Because of his work stress, he has been drinking more frequently and routinely has several drinks in the evening.
               </p>
+
             </div>
           </div>
 
         </div>
       </div>
 
+<div class="container">
+  <div class="row videoContainer">
+    <div class=" col-md-8 offset-md-2" style="">
+                              <div class="videoInfo" style="">
+                              </div>
+                              <div class="kal-group" data-name="WAL/CBLD/0001/WAL_CBLD0001_01_A_EN" style="height:300px; width:100%;">
+                              </div>
+
+    </div>
+  </div>
+
+</div>
+
+
 
 
 
 
       <div class="container mainContainer">
-        <div class="row grid--home" >
+        <div  id="episode1__grid" class="row grid">
       </div>
 
 <!-- end mainContainer -->
@@ -68,37 +111,20 @@
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../bower_components/mustache.js/mustache.js"></script>
     <!-- endbower -->
+    <script src="js/kaltura-custom.js" data-skin-name="walden"></script>
     <script src="js/main.js"></script>
     <!-- endbuild -->
 
 
 
-<script id="episodesTemplate" type="text/template">
-  {{#episodeList}}
-<div class="col-lg-4 col-md-6">
-  <figure class="effect-duke">
-              <img src="images/{{image}}.jpg" alt="img27"/>
-              <figcaption>
-                <h2><span>{{count}}. </span>{{title}}</h2>
-                <p>{{description}}</p>
-                <p><span>Go to Episode > </span></p>
-
-                <a class="" href="{{episodeTgt}}.html">View more</a>
-              </figcaption>
-  </figure>
-  </div>
-    {{/episodeList}}
-</script>
-
 
 <script id="templateBtns" type="text/template">
-
-  <div class="row">
+  {{#chapters}}
 <div class="col-lg-4 col-md-6">
   <figure class="effect-kira">
     <img src="images/{{itemImage}}.jpg" alt="img27"/>
     <figcaption>
-      <h2><span>{{index}}</span>{{title}} </h2>
+      <h2>Chapter <span> {{index}}</span></h2>
       <blockquote>{{description}}</blockquote>
 
         <div class="clickFigure"  data-target={{referenceID}} data-title={{title}} href="#"></div>
@@ -110,15 +136,8 @@
     </figcaption>
   </figure>
 </div>
-</div>
+  {{/chapters}}
 </script>
-
-<a id="url" target="_blank"
-
-
-
-
-
 
 
 

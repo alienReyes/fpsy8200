@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title>EYE SEE YOU (title)</title>
+
+
+
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script type="text/javascript">
+      var fileName="episodes";
+      var episodeNum="episode2"
+
+    </script>
+</head>
+
+<body>
+
+
+  <nav class="audioPlayer navbar-fixed-top  navbar-dark bg-inverse">
+
+    <div class="container-fluid">
+    <div class="row">
+      <div class="progressBar seekBar">
+    <div class="timeBar"></div>
+    <span class="currentTime"></span>
+    <span class="totalTime"></span>
+</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <a id="playBtn" href="#">
+          <span class="pause"></span>
+          <span class="play"></span>
+        </a>
+      </div>
+      <div class="col-md-12 videotitle">
+        <h1 id="vidTitle"></h1>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  </nav>
+
+  <div class="bd-pageheader">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <h1>EYE SEE YOU</h1>
+              <p class="lead">
+            Police are investigating the discovery of a badly decomposed body of a woman who went missing 10 years ago and may have had an association with Luis Guzman. Luis Guzman is currently under consideration for parole from incarceration having been found guilty of stalking and sexual abuse of women. (Main text)
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+<div class="container">
+  <div class="row videoContainer">
+    <div class=" col-md-8 offset-md-2" style="">
+                              <div class="videoInfo" style="">
+                              </div>
+                              <div class="kal-group" data-name="WAL/CBLD/0001/WAL_CBLD0001_01_A_EN" style="height:300px; width:100%;">
+                              </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+      <div class="container mainContainer">
+        <div class="row grid">
+      </div>
+
+<!-- end mainContainer -->
+        </div>
+
+
+
+
+
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<!-- //hiden kaltura player -->
+
+
+    <script src="js/main.min.js"></script>
+
+
+
+
+<script id="templateBtns" type="text/template">
+  {{#chapters}}
+<div class="col-lg-4 col-md-6">
+  <figure class="effect-kira">
+    <img src="images/{{itemImage}}.jpg" alt="img27"/>
+    <figcaption>
+      <h2>Chapter <span> {{index}}</span></h2>
+      <blockquote>{{description}}</blockquote>
+
+        <div class="clickFigure"  data-target={{referenceID}} data-title={{title}} href="#"></div>
+      <p>
+        <a data-toggle="tooltip" data-placement="bottom" title="Download Audio" target="_blank" href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}-DL.zip"><i class="fa fa-fw fa fa-download"></i><span>Download Audio</span></a>
+        <a data-toggle="tooltip" data-placement="bottom" title="Download Transcripts" target="_blank" href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}.pdf"><i class="fa fa-fw fa-file-text"></i></a>
+
+      </p>
+    </figcaption>
+  </figure>
+</div>
+  {{/chapters}}
+</script>
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+</html>

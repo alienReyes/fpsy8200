@@ -1,25 +1,16 @@
-.bd-pageheader
-{ color: white;
-h1 {
-  color: white;
-  text-align: center;
-  font-size: 3rem;
+#episode1__grid {
+    @include gridElement ($pink);
 
 }
 
-p {
-
+#episode1{
+    @include header ($pink);
 }
 
-}
+
 
 
 /* item is invisible, but used for layout */
-.grid-item,
-.grid-item-content {
-//  width: $itemWidth;
-  height:$itemWidth;
-}
 
 .hidePlayer {
 //opacity: 0.0;
@@ -27,27 +18,10 @@ p {
 
 
 /* item-content is visible, and transitions size */
-.grid-item-content {
-  color :$darkblue;
-//  width: $itemWidth;
-  height: $itemWidth;
-  text-align: center;
-  width: auto;
-display: block;
-   -webkit-transition: width 0.4s, height 0.4s;
-  -moz-transition: width 0.4s, height 0.4s;
-      -o-transition: width 0.4s, height 0.4s;
-    transition: width 0.4s, height 0.4s;
-  img {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
 
-}
 /*SEEK BAR*/
 
 .seekBar {
-
 span {
   color: white;
   font-weight: 300;
@@ -87,40 +61,55 @@ span {
     background-color: $md-blue-grey-400;
 }
 /* both item and item content change size */
+
+
+
+//videoTimeUpdateHandler
+
+.kal-group {
+  height: 0px;
+  opacity:1;
+  @include transition-property(all);
+  @include transition-duration (.5s);
+}
+
+.kal-group__on {
+  opacity: 1;
+  height: 350px;
+}
+
+
+
+//common grid elements
+
 .grid-item.is-expanded,
 .grid-item.is-expanded .grid-item-content {
   width: 100%;
   min-height: 400px;
 }
 
-//hover effects//
-/* Common style */
-.grid figure {
-	position: relative;
-	float: left;
-	overflow: hidden;
-	// margin: 10px 1%;
-	// min-width: 320px;
-	// max-width: 480px;
-	// max-height: 360px;
-//	width: 48%;
-	height: auto;
-  height:400px;
-	background: $darkerblue;
-	text-align: center;
+.grid-item,
+.grid-item-content {
+//  width: $itemWidth;
+  height:$itemWidth;
 }
 
-.grid figure img {
-	position: relative;
-	display: block;
-	min-height: 100%;
-	max-width: 100%;
-	opacity: 0.8;
-  object-fit: cover;
-  _:-ms-lang(x), img {
-                height:100%;
-                width:100%;
-           }
+.grid-item-content {
+  color :$darkblue;
+//  width: $itemWidth;
+  height: $itemWidth;
+  text-align: center;
+  width: auto;
+display: block;
+   -webkit-transition: width 0.4s, height 0.4s;
+  -moz-transition: width 0.4s, height 0.4s;
+      -o-transition: width 0.4s, height 0.4s;
+    transition: width 0.4s, height 0.4s;
+  img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
 }
 
 .grid figure figcaption {
@@ -145,9 +134,6 @@ span {
 	width: 100%;
 	height: 100%;
 }
-
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
 .grid figure figcaption > a {
 	z-index: 1000;
 	text-indent: 200%;
@@ -175,122 +161,6 @@ span {
 	font-size: 68.5%;
 }
 
-
-
-
-
-
-
-
-/***kira efetc // has buttons
-
-/*-----------------*/
-/***** Kira *****/
-/*-----------------*/
-
-figure.effect-kira {
-	background: $darkblue;
-	text-align: left;
-  -webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-
-  blockquote {
-    padding: 10px;
-    color:white;
-    margin: 10px 0;
-     text-transform: none;
-     font-size: 1rem;
-     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-   	transition: opacity 0.35s, transform 0.35s;
-     opacity: 0;
-     transform: translate3d(0,-25px,0);
-  }
-
-
-}
-
-figure.effect-kira img {
-  opacity:.3;
-	-webkit-transition: opacity 0.35s,-webkit-transform 0.35s ;
-	transition: opacity 0.35s, transform 0.35s;
-}
-
-figure.effect-kira figcaption {
-	z-index: 1;
-}
-
-figure.effect-kira p {
-	padding: 2em 3rem;
-	font-weight: 600;
-	font-size: 3rem;
-	line-height: 1.5;
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
-	//opacity: 0;
-	//  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	//  transition: opacity 0.35s, transform 0.35s;
-	//  -webkit-transform: translate3d(0,0rem,0);
-	//  transform: translate3d(0,0rem,0);
-}
-
-figure.effect-kira p a {
-	margin: 0 0.5em;
-	color: white;
-  font-size: 1.5rem;
-  span {
-    font-size: .5rem;
-    line-height: 1.5rem;
-    display:none;
-
-  }
-
-}
-
-
-figure.effect-kira p a:hover,
-figure.effect-kira p a:focus {
-	opacity: 0.8;
-  color: white;
-
-}
-
-
-
-figure.effect-kira:hover img {
-	opacity: 0.5;
-
-}
-
-figure.effect-kira:hover blockquote {
-	opacity:0.8;
-  -webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-
-figure.effect-kira:hover p {
-	opacity: 1;
-	// -webkit-transform: translate3d(0,2rem,0);
-	// transform: translate3d(0,2rem,0);
-}
-
-//videoTimeUpdateHandler
-
-.kal-group {
-  height: 0px;
-  opacity:1;
-  @include transition-property(all);
-  @include transition-duration (.5s);
-}
-
-.kal-group__on {
-  opacity: 1;
-  height: 350px;
-}
-
-
 .clickFigure {
   width:4rem;
   height:4rem;
@@ -312,19 +182,7 @@ figure.effect-kira:hover p {
   background-position:top;
 }
 
-figure.active   {
 
-
-  img {
-    	opacity: 0.5;
-  }
-  blockquote {
-   opacity:0.8;
-   -webkit-transform: translate3d(0,0,0);
-   transform: translate3d(0,0,0);
- }
-
-}
 //grid home
 
 .grid--home {

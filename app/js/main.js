@@ -29,20 +29,20 @@ function jsCallbackReady(objectId) {
 $(document).ready(function() {
   $('.videoContainer').hide();
     $('.audioPlayer').hide();
-    $.getJSON('js/'+jsonFile, function(data) {
+    $.getJSON('js/data.json', function(data) {
       if (fileName =="home") {
         var template = document.getElementById('episodesTemplate').innerHTML;
           var html = Mustache.to_html(template, data);
           $('.grid--home').append(html);
       }
       else{
-            console.log (data.items+"<< grid 2")
-        var template2 = document.getElementById('templateBtns').innerHTML;
-
-        $.each(data.items, function(i, item) {
+                var template2 = document.getElementById('templateBtns').innerHTML;
+        $.each(data.episodes, function(i, item) {
+        if  (item.id==episodeNum){
             var html = Mustache.to_html(template2, item);
               var fPath=cdnBasePath+item.referenceID +".json"
             $('.grid').append(html);
+            }
         });
       }
        });

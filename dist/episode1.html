@@ -10,16 +10,11 @@
 
 
 
-    <!--build:css css/style.min.css-->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
-    <!-- endbower -->
-    <link rel="stylesheet" href="css/style.css">
-    <!--endbuild-->
+    <link rel="stylesheet" href="css/style.min.css">
 
     <script type="text/javascript">
       var fileName="episodes";
-      var jsonFile="data.json"
+      var episodeNum="episode1"
 
     </script>
 </head>
@@ -57,9 +52,9 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 offset-md-2">
-              <h1>Title of the adventure</h1>
+              <h1>DEATH IN THE FAMILY</h1>
               <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim distinctio quasi reiciendis odio, dignissimos, consectetur temporibus itaque, sequi incidunt quos corrupti facere! Facere, facilis? Est perferendis iure numquam debitis dignissimos?
+              Scott Moyer is a 38-years old sales representative for a manufacturing company. He lives with his wife Andrea and their two sons, Connor and Tyler. Scott’s performance at work has been decreasing over the past several months. Because of his work stress, he has been drinking more frequently and routinely has several drinks in the evening.
               </p>
 
             </div>
@@ -87,7 +82,7 @@
 
 
       <div class="container mainContainer">
-        <div class="row grid">
+        <div id="episode1" class="row grid">
       </div>
 
 <!-- end mainContainer -->
@@ -104,45 +99,18 @@
 <!-- //hiden kaltura player -->
 
 
-    <!--build:js js/main.min.js -->
-    <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/tether/dist/js/tether.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../bower_components/mustache.js/mustache.js"></script>
-    <!-- endbower -->
-    <script src="js/kaltura-custom.js" data-skin-name="walden"></script>
-    <script src="js/main.js"></script>
-    <!-- endbuild -->
+    <script src="js/main.min.js"></script>
 
 
-
-<script id="figureTemplate" type="text/template">
-<div class="col-md-4">
-  <figure class="effect-duke">
-              <img src="images/{{itemImage}}.jpg" alt="img27"/>
-              <figcaption>
-                <h2>{{title}}<span>Duke</span></h2>
-                <p>{{description}}</p>
-
-                <ul>
-                  <li><a class="audio" href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}-DL.zip">test audio</a></li>
-                  <li><a href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}-CC.zip">captions</a></li>
-                </ul>
-                <a class="clickFigure"  data-target={{referenceID}} data-title={{title}}  href="#">View more</a>
-              </figcaption>
-  </figure>
-  </div>
-</script>
 
 
 <script id="templateBtns" type="text/template">
+  {{#chapters}}
 <div class="col-lg-4 col-md-6">
   <figure class="effect-kira">
-
     <img src="images/{{itemImage}}.jpg" alt="img27"/>
     <figcaption>
-      <h2><span>{{index}}</span>{{title}} </h2>
+      <h2>Chapter <span> {{index}}</span></h2>
       <blockquote>{{description}}</blockquote>
 
         <div class="clickFigure"  data-target={{referenceID}} data-title={{title}} href="#"></div>
@@ -154,14 +122,8 @@
     </figcaption>
   </figure>
 </div>
+  {{/chapters}}
 </script>
-
-<a id="url" target="_blank"
-
-
-
-
-
 
 
 
