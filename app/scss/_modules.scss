@@ -1,12 +1,30 @@
 #episode1__grid {
-    @include gridElement ($pink);
+    @include gridElement ($episode1C);
 
 }
 
 #episode1{
-    @include header ($pink);
+    @include header ($episode1C);
+}
+#episode2__grid {
+    @include gridElement ($episode2C);
+
 }
 
+#episode2{
+    @include header ($episode2C);
+}
+#episode3__grid {
+    @include gridElement ($episode3C);
+
+}
+
+#episode3{
+    @include header ($episode3C);
+}
+#home{
+    @include header ($darkerblue);
+}
 
 
 
@@ -173,6 +191,9 @@ display: block;
    transition:background-position .1s ease-in;
    cursor: pointer;
    background-color: rgba(0, 0, 0, 0);
+   position:absolute;
+   left:102px;
+   bottom:100px;
 
 
 

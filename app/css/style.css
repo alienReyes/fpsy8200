@@ -6094,6 +6094,10 @@ body {
   background-color: #eceff1;
 }
 
+.navbar-toggler {
+  color: white !important;
+}
+
 .mainTitle {
   color: white !important;
   font-family: "Fjalla One", sans-serif;
@@ -6174,13 +6178,23 @@ p {
   left: 15px;
 }
 
+.vContainer {
+  background: black;
+  margin-bottom: 2rem;
+}
+
+.coverImg--container img {
+  object-fit: cover;
+  float: right;
+}
+
 #episode1__grid figure {
   position: relative;
   float: left;
   overflow: hidden;
   height: auto;
   height: 400px;
-  background: #C61C6F;
+  background: #8d2c34;
   text-align: center;
 }
 #episode1__grid figure img {
@@ -6196,17 +6210,18 @@ p {
   width: 100%;
 }
 #episode1__grid figure.effect-kira {
-  background: #C61C6F;
+  background: #8d2c34;
   text-align: left;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 #episode1__grid figure.effect-kira blockquote {
-  padding: 10px;
+  padding: 5px;
   color: white;
-  margin: 10px 0;
+  margin: 0px 0;
   text-transform: none;
-  font-size: 1rem;
+  font-size: .9rem;
+  line-height: 1.3;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   opacity: 0;
@@ -6265,11 +6280,11 @@ p {
 }
 
 #episode1 .bd-pageheader {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
+  font-family: "Lato", sans-serif;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   text-align: left;
-  background-color: #C61C6F;
+  background-color: #8d2c34;
   background-size: cover;
   color: white;
 }
@@ -6277,6 +6292,281 @@ p {
   color: white;
   text-align: center;
   font-size: 3rem;
+}
+#episode1 .bd-pageheader .lead {
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+}
+#episode1 .bd-pageheader .episodeTitle {
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+#episode1 .bd-pageheader .episodeTitle span {
+  font-size: 70%;
+  font-weight: 100;
+}
+
+#episode2__grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  height: auto;
+  height: 400px;
+  background: #370f3b;
+  text-align: center;
+}
+#episode2__grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+  object-fit: cover;
+}
+#episode2__grid figure img _:-ms-lang(x), #episode2__grid figure img img {
+  height: 100%;
+  width: 100%;
+}
+#episode2__grid figure.effect-kira {
+  background: #370f3b;
+  text-align: left;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode2__grid figure.effect-kira blockquote {
+  padding: 5px;
+  color: white;
+  margin: 0px 0;
+  text-transform: none;
+  font-size: .9rem;
+  line-height: 1.3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  opacity: 0;
+  transform: translate3d(0, -25px, 0);
+}
+#episode2__grid figure.effect-kira img {
+  opacity: .3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+#episode2__grid figure.effect-kira figcaption {
+  z-index: 1;
+}
+#episode2__grid figure.effect-kira p {
+  padding: 2em 3rem;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#episode2__grid figure.effect-kira p a {
+  margin: 0 0.5em;
+  color: white;
+  font-size: 1.5rem;
+}
+#episode2__grid figure.effect-kira p a span {
+  font-size: .5rem;
+  line-height: 1.5rem;
+  display: none;
+}
+#episode2__grid figure.effect-kira p a:hover,
+#episode2__grid figure.effect-kira p a:focus {
+  opacity: 0.8;
+  color: white;
+}
+#episode2__grid figure.active img {
+  opacity: 0.5;
+}
+#episode2__grid figure.active blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode2__grid figure.effect-kira:hover img {
+  opacity: 0.5;
+}
+#episode2__grid figure.effect-kira:hover blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode2__grid figure.effect-kira:hover p {
+  opacity: 1;
+}
+
+#episode2 .bd-pageheader {
+  font-family: "Lato", sans-serif;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  background-color: #370f3b;
+  background-size: cover;
+  color: white;
+}
+#episode2 .bd-pageheader h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+#episode2 .bd-pageheader .lead {
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+}
+#episode2 .bd-pageheader .episodeTitle {
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+#episode2 .bd-pageheader .episodeTitle span {
+  font-size: 70%;
+  font-weight: 100;
+}
+
+#episode3__grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  height: auto;
+  height: 400px;
+  background: #202860;
+  text-align: center;
+}
+#episode3__grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+  object-fit: cover;
+}
+#episode3__grid figure img _:-ms-lang(x), #episode3__grid figure img img {
+  height: 100%;
+  width: 100%;
+}
+#episode3__grid figure.effect-kira {
+  background: #202860;
+  text-align: left;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode3__grid figure.effect-kira blockquote {
+  padding: 5px;
+  color: white;
+  margin: 0px 0;
+  text-transform: none;
+  font-size: .9rem;
+  line-height: 1.3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  opacity: 0;
+  transform: translate3d(0, -25px, 0);
+}
+#episode3__grid figure.effect-kira img {
+  opacity: .3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+#episode3__grid figure.effect-kira figcaption {
+  z-index: 1;
+}
+#episode3__grid figure.effect-kira p {
+  padding: 2em 3rem;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#episode3__grid figure.effect-kira p a {
+  margin: 0 0.5em;
+  color: white;
+  font-size: 1.5rem;
+}
+#episode3__grid figure.effect-kira p a span {
+  font-size: .5rem;
+  line-height: 1.5rem;
+  display: none;
+}
+#episode3__grid figure.effect-kira p a:hover,
+#episode3__grid figure.effect-kira p a:focus {
+  opacity: 0.8;
+  color: white;
+}
+#episode3__grid figure.active img {
+  opacity: 0.5;
+}
+#episode3__grid figure.active blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode3__grid figure.effect-kira:hover img {
+  opacity: 0.5;
+}
+#episode3__grid figure.effect-kira:hover blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode3__grid figure.effect-kira:hover p {
+  opacity: 1;
+}
+
+#episode3 .bd-pageheader {
+  font-family: "Lato", sans-serif;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  background-color: #202860;
+  background-size: cover;
+  color: white;
+}
+#episode3 .bd-pageheader h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+#episode3 .bd-pageheader .lead {
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+}
+#episode3 .bd-pageheader .episodeTitle {
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+#episode3 .bd-pageheader .episodeTitle span {
+  font-size: 70%;
+  font-weight: 100;
+}
+
+#home .bd-pageheader {
+  font-family: "Lato", sans-serif;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  background-color: #042029;
+  background-size: cover;
+  color: white;
+}
+#home .bd-pageheader h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+#home .bd-pageheader .lead {
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+}
+#home .bd-pageheader .episodeTitle {
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+#home .bd-pageheader .episodeTitle span {
+  font-size: 70%;
+  font-weight: 100;
 }
 
 /* item is invisible, but used for layout */
@@ -6424,6 +6714,9 @@ p {
   transition: background-position .1s ease-in;
   cursor: pointer;
   background-color: transparent;
+  position: absolute;
+  left: 102px;
+  bottom: 100px;
 }
 
 .clicked {

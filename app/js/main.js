@@ -71,6 +71,8 @@ $("body").tooltip({
                 "referenceId": refId
             });
             currRefId = refId;
+
+                $('.coverImg--container').hide('300');
               $('.videoContainer').show('300');
 
         }
