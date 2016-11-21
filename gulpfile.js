@@ -36,7 +36,7 @@ var config = { 
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: 'app',
+      baseDir: 'dist',
       routes: {
       '/bower_components': 'bower_components'
     }
@@ -109,7 +109,7 @@ gulp.task('watch', function() {
 gulp.task('useref', function() {
   return gulp.src('app/*.html')
     .pipe(useref({
-      'searchPath':['./', 'bower_components/*','./app']
+      'searchPath':['./', 'bower_components/*','./app/']
     }))
     .pipe(gulpIf('*.js', uglify()))
   //  .pipe(gulpIf('*.css', cssnano()))
@@ -148,7 +148,15 @@ gulp.task('jsonCopy', function() {
   return gulp.src('app/js/*.json')
     .pipe(jsonminify())
     .pipe(gulp.dest('dist/js/'))
-})
+}),
+gulp.task('kcssCopy', function() {
+  return gulp.src('app/css/kaltura-custom.css')
+    .pipe(gulp.dest('dist/css/'))
+}),
+gulp.task('kjsCopy', function() {
+  return gulp.src('app/js/kaltura-custom.js')
+    .pipe(gulp.dest('dist/js/'))
+}),
 
 // Cleaning
 gulp.task('clean', function() {
@@ -173,7 +181,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
   runSequence(
     'clean:dist',
-    ['compass','jsonCopy', 'useref', 'images', 'icons','fonts'],
+    ['compass','jsonCopy','kcssCopy','kjsCopy', 'useref', 'images', 'icons','fonts'],
     callback
   )
 })

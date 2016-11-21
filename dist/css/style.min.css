@@ -1807,7 +1807,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
-@import url(http://fonts.googleapis.com/css?family=Lato:100,400,700,400italic,700italic|Arvo:700|Fjalla+One);
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Lato:100,400,400i,700i");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7846,6 +7846,7 @@ a.text-danger:focus, a.text-danger:hover {
 /*Material Colors*/
 /*Dimensions*/
 /* Google Fonts */
+/* Common style */
 body {
   background: #536870;
   font-family: "Lato", sans-serif;
@@ -7895,13 +7896,12 @@ body {
   background-color: #eceff1;
 }
 
-.bd-pageheader {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  text-align: left;
-  background-color: #042029;
-  background-size: cover;
+html {
+  background: #282828;
+}
+
+.navbar-toggler {
+  color: white !important;
 }
 
 .mainTitle {
@@ -7984,38 +7984,439 @@ p {
   left: 15px;
 }
 
-.bd-pageheader {
+.vContainer {
+  background: black;
+  margin-bottom: 2rem;
+}
+
+.coverImg--container img {
+  object-fit: cover;
+  float: right;
+}
+
+#episode1__grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+  -webkit-transition: opacity 0.35s;
+  height: auto;
+  height: 400px;
+  background: #8d2c34;
+  text-align: center;
+}
+#episode1__grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 300px;
+  opacity: 0.8;
+  object-fit: cover;
+}
+#episode1__grid figure img _:-ms-lang(x), #episode1__grid figure img img {
+  height: 100%;
+  width: 100%;
+}
+#episode1__grid figure.effect-kira {
+  background: #8d2c34;
+  text-align: left;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode1__grid figure.effect-kira blockquote {
+  padding: 5px;
+  color: white;
+  margin: 0px 0;
+  text-transform: none;
+  font-size: .9rem;
+  line-height: 1.3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  opacity: 0;
+  transform: translate3d(0, -25px, 0);
+}
+#episode1__grid figure.effect-kira img {
+  opacity: .3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+#episode1__grid figure.effect-kira figcaption {
+  z-index: 1;
+}
+#episode1__grid figure.effect-kira p {
+  padding: 2em 3rem;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#episode1__grid figure.effect-kira p a {
+  margin: 0 0.5em;
+  color: white;
+  font-size: 1.5rem;
+}
+#episode1__grid figure.effect-kira p a span {
+  font-size: .5rem;
+  line-height: 1.5rem;
+  display: none;
+}
+#episode1__grid figure.effect-kira p a:hover,
+#episode1__grid figure.effect-kira p a:focus {
+  opacity: 0.8;
   color: white;
 }
-.bd-pageheader h1 {
+#episode1__grid figure.active img {
+  opacity: 0.5;
+}
+#episode1__grid figure.active blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode1__grid figure.effect-kira:hover img {
+  opacity: 0.5;
+}
+#episode1__grid figure.effect-kira:hover blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode1__grid figure.effect-kira:hover p {
+  opacity: 1;
+}
+
+#episode1 .bd-pageheader {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  line-height: 1;
+  background-color: #8d2c34;
+  background-size: cover;
+  color: white;
+}
+#episode1 .bd-pageheader h1 {
   color: white;
   text-align: center;
   font-size: 3rem;
+  font-weight: 100 !important;
+  font-family: "Lato", sans-serif !important;
+}
+#episode1 .bd-pageheader .lead {
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+}
+#episode1 .bd-pageheader .episodeTitle {
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+#episode1 .bd-pageheader .episodeTitle span {
+  font-size: 70%;
+  font-weight: 100;
+}
+
+#episode2__grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+  -webkit-transition: opacity 0.35s;
+  height: auto;
+  height: 400px;
+  background: #370f3b;
+  text-align: center;
+}
+#episode2__grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 300px;
+  opacity: 0.8;
+  object-fit: cover;
+}
+#episode2__grid figure img _:-ms-lang(x), #episode2__grid figure img img {
+  height: 100%;
+  width: 100%;
+}
+#episode2__grid figure.effect-kira {
+  background: #370f3b;
+  text-align: left;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode2__grid figure.effect-kira blockquote {
+  padding: 5px;
+  color: white;
+  margin: 0px 0;
+  text-transform: none;
+  font-size: .9rem;
+  line-height: 1.3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  opacity: 0;
+  transform: translate3d(0, -25px, 0);
+}
+#episode2__grid figure.effect-kira img {
+  opacity: .3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+#episode2__grid figure.effect-kira figcaption {
+  z-index: 1;
+}
+#episode2__grid figure.effect-kira p {
+  padding: 2em 3rem;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#episode2__grid figure.effect-kira p a {
+  margin: 0 0.5em;
+  color: white;
+  font-size: 1.5rem;
+}
+#episode2__grid figure.effect-kira p a span {
+  font-size: .5rem;
+  line-height: 1.5rem;
+  display: none;
+}
+#episode2__grid figure.effect-kira p a:hover,
+#episode2__grid figure.effect-kira p a:focus {
+  opacity: 0.8;
+  color: white;
+}
+#episode2__grid figure.active img {
+  opacity: 0.5;
+}
+#episode2__grid figure.active blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode2__grid figure.effect-kira:hover img {
+  opacity: 0.5;
+}
+#episode2__grid figure.effect-kira:hover blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode2__grid figure.effect-kira:hover p {
+  opacity: 1;
+}
+
+#episode2 .bd-pageheader {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  line-height: 1;
+  background-color: #370f3b;
+  background-size: cover;
+  color: white;
+}
+#episode2 .bd-pageheader h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100 !important;
+  font-family: "Lato", sans-serif !important;
+}
+#episode2 .bd-pageheader .lead {
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+}
+#episode2 .bd-pageheader .episodeTitle {
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+#episode2 .bd-pageheader .episodeTitle span {
+  font-size: 70%;
+  font-weight: 100;
+}
+
+#episode3__grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+  -webkit-transition: opacity 0.35s;
+  height: auto;
+  height: 400px;
+  background: #202860;
+  text-align: center;
+}
+#episode3__grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 300px;
+  opacity: 0.8;
+  object-fit: cover;
+}
+#episode3__grid figure img _:-ms-lang(x), #episode3__grid figure img img {
+  height: 100%;
+  width: 100%;
+}
+#episode3__grid figure.effect-kira {
+  background: #202860;
+  text-align: left;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode3__grid figure.effect-kira blockquote {
+  padding: 5px;
+  color: white;
+  margin: 0px 0;
+  text-transform: none;
+  font-size: .9rem;
+  line-height: 1.3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  opacity: 0;
+  transform: translate3d(0, -25px, 0);
+}
+#episode3__grid figure.effect-kira img {
+  opacity: .3;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+#episode3__grid figure.effect-kira figcaption {
+  z-index: 1;
+}
+#episode3__grid figure.effect-kira p {
+  padding: 2em 3rem;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#episode3__grid figure.effect-kira p a {
+  margin: 0 0.5em;
+  color: white;
+  font-size: 1.5rem;
+}
+#episode3__grid figure.effect-kira p a span {
+  font-size: .5rem;
+  line-height: 1.5rem;
+  display: none;
+}
+#episode3__grid figure.effect-kira p a:hover,
+#episode3__grid figure.effect-kira p a:focus {
+  opacity: 0.8;
+  color: white;
+}
+#episode3__grid figure.active img {
+  opacity: 0.5;
+}
+#episode3__grid figure.active blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode3__grid figure.effect-kira:hover img {
+  opacity: 0.5;
+}
+#episode3__grid figure.effect-kira:hover blockquote {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#episode3__grid figure.effect-kira:hover p {
+  opacity: 1;
+}
+
+#episode3 .bd-pageheader {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  line-height: 1;
+  background-color: #202860;
+  background-size: cover;
+  color: white;
+}
+#episode3 .bd-pageheader h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100 !important;
+  font-family: "Lato", sans-serif !important;
+}
+#episode3 .bd-pageheader .lead {
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+}
+#episode3 .bd-pageheader .episodeTitle {
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+#episode3 .bd-pageheader .episodeTitle span {
+  font-size: 70%;
+  font-weight: 100;
+}
+
+#home .bd-pageheader {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  line-height: 1;
+  background-color: #232323;
+  background-size: cover;
+  color: white;
+}
+#home .bd-pageheader h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100 !important;
+  font-family: "Lato", sans-serif !important;
+}
+#home .bd-pageheader .lead {
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+}
+#home .bd-pageheader .episodeTitle {
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+#home .bd-pageheader .episodeTitle span {
+  font-size: 70%;
+  font-weight: 100;
+}
+#home body {
+  height: 100%;
+  background: #282828;
+  /* fallback for old browsers */
+  background-image: url("/images/bg_index.jpg");
+  background-size: cover;
+}
+
+.vidLinks {
+  margin: 0 0.5em;
+  color: white !important;
+  opacity: 0.4;
+  font-size: 1.1rem;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+.vidLinks:hover {
+  color: white !important;
+  opacity: 1;
 }
 
 /* item is invisible, but used for layout */
-.grid-item,
-.grid-item-content {
-  height: 200px;
-}
-
 /* item-content is visible, and transitions size */
-.grid-item-content {
-  color: #0A2933;
-  height: 200px;
-  text-align: center;
-  width: auto;
-  display: block;
-  -webkit-transition: width 0.4s, height 0.4s;
-  -moz-transition: width 0.4s, height 0.4s;
-  -o-transition: width 0.4s, height 0.4s;
-  transition: width 0.4s, height 0.4s;
-}
-.grid-item-content img {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
 /*SEEK BAR*/
 .seekBar span {
   color: white;
@@ -8052,34 +8453,49 @@ p {
 }
 
 /* both item and item content change size */
+.kal-group {
+  height: 0px;
+  opacity: 1;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.kal-group__on {
+  opacity: 1;
+  height: 350px;
+}
+
 .grid-item.is-expanded,
 .grid-item.is-expanded .grid-item-content {
   width: 100%;
   min-height: 400px;
 }
 
-/* Common style */
-.grid figure {
-  position: relative;
-  float: left;
-  overflow: hidden;
-  height: auto;
-  height: 400px;
-  background: #042029;
-  text-align: center;
+.grid-item,
+.grid-item-content {
+  height: 200px;
 }
 
-.grid figure img {
-  position: relative;
+.grid-item-content {
+  color: #0A2933;
+  height: 200px;
+  text-align: center;
+  width: auto;
   display: block;
-  min-height: 100%;
-  max-width: 100%;
-  opacity: 0.8;
-  object-fit: cover;
+  -webkit-transition: width 0.4s, height 0.4s;
+  -moz-transition: width 0.4s, height 0.4s;
+  -o-transition: width 0.4s, height 0.4s;
+  transition: width 0.4s, height 0.4s;
 }
-.grid figure img _:-ms-lang(x), .grid figure img img {
-  height: 100%;
-  width: 100%;
+.grid-item-content img {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .grid figure figcaption {
@@ -8105,8 +8521,6 @@ p {
   height: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
 .grid figure figcaption > a {
   z-index: 1000;
   text-indent: 200%;
@@ -8134,98 +8548,6 @@ p {
   font-size: 68.5%;
 }
 
-/***kira efetc // has buttons
-
-/*-----------------*/
-/***** Kira *****/
-/*-----------------*/
-figure.effect-kira {
-  background: #0A2933;
-  text-align: left;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-figure.effect-kira blockquote {
-  padding: 10px;
-  color: white;
-  margin: 10px 0;
-  text-transform: none;
-  font-size: 1rem;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  opacity: 0;
-  transform: translate3d(0, -25px, 0);
-}
-
-figure.effect-kira img {
-  opacity: .3;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-}
-
-figure.effect-kira figcaption {
-  z-index: 1;
-}
-
-figure.effect-kira p {
-  padding: 2em 3rem;
-  font-weight: 600;
-  font-size: 3rem;
-  line-height: 1.5;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-figure.effect-kira p a {
-  margin: 0 0.5em;
-  color: white;
-  font-size: 1.5rem;
-}
-figure.effect-kira p a span {
-  font-size: .5rem;
-  line-height: 1.5rem;
-  display: none;
-}
-
-figure.effect-kira p a:hover,
-figure.effect-kira p a:focus {
-  opacity: 0.8;
-  color: white;
-}
-
-figure.effect-kira:hover img {
-  opacity: 0.5;
-}
-
-figure.effect-kira:hover blockquote {
-  opacity: 0.8;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-figure.effect-kira:hover p {
-  opacity: 1;
-}
-
-.kal-group {
-  height: 0px;
-  opacity: 1;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-
-.kal-group__on {
-  opacity: 1;
-  height: 350px;
-}
-
 .clickFigure {
   width: 4rem;
   height: 4rem;
@@ -8238,19 +8560,13 @@ figure.effect-kira:hover p {
   transition: background-position .1s ease-in;
   cursor: pointer;
   background-color: transparent;
+  position: absolute;
+  left: 102px;
+  bottom: 100px;
 }
 
 .clicked {
   background-position: top;
-}
-
-figure.active img {
-  opacity: 0.5;
-}
-figure.active blockquote {
-  opacity: 0.8;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 .grid--home figure {
@@ -8266,7 +8582,7 @@ figure.active blockquote {
   position: relative;
   display: block;
   min-height: 100%;
-  max-width: 100%;
+  max-width: 350px;
   opacity: 1;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -8297,6 +8613,11 @@ figure.active blockquote {
   font-size: 1.6rem;
   font-weight: 800;
 }
+@media screen\0 {
+  .grid--home figure figcaption p {
+    opacity: 1;
+  }
+}
 .grid--home figure figcaption h2 {
   text-transform: uppercase;
 }
@@ -8318,6 +8639,12 @@ figure.active blockquote {
   white-space: nowrap;
   font-size: 0;
   opacity: 0;
+}
+@media screen\0 {
+  .grid--home figure figcaption > a {
+    opacity: .1;
+    background: rgba(0, 0, 0, 0.1);
+  }
 }
 .grid--home figure:hover p {
   opacity: 1;

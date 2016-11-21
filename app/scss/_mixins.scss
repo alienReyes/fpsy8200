@@ -9,10 +9,11 @@
 @mixin header ($mainColor){
 
 	.bd-pageheader {
-		font-family: $lato;
-	    padding-top: 1.5rem;
-	    padding-bottom: 1rem;
+
+	    padding-top:2rem;
+	    padding-bottom:1rem;
 	    text-align: left;
+			line-height: 1;
 	    background-color:$mainColor;
 	    background-size: cover;
 	    color: white;
@@ -20,6 +21,8 @@
 	      color: white;
 	      text-align: center;
 	      font-size: 3rem;
+				font-weight: 100!important;
+				font-family: $lato!important;
 
 	    }
 			.lead {
@@ -47,6 +50,10 @@ figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.35s;
+	-webkit-transition: opacity 0.35s;
 	// margin: 10px 1%;
 	// min-width: 320px;
 	// max-width: 480px;
@@ -61,7 +68,7 @@ figure {
 		position: relative;
 		display: block;
 		min-height: 100%;
-		max-width: 100%;
+		max-width:300px;
 		opacity: 0.8;
 	  object-fit: cover;
 	  _:-ms-lang(x), img {

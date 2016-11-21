@@ -10,6 +10,7 @@
     var fileName="home";
     var jsonFile="data.json"
   </script>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato:100,400,400i,700i" rel="stylesheet">
 
 
 
@@ -29,7 +30,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1>Podcast Repositorie </h1>
+              <h1>Forensic Psychology Case Study Podcasts </h1>
             <br>
             </div>
           </div>
@@ -42,6 +43,7 @@
 
 
       <div class="container mainContainer">
+        <br>
         <div class="row grid--home" >
       </div>
 
@@ -77,11 +79,12 @@
   <figure class="effect-duke">
               <img src="images/{{image}}.jpg" alt="img27"/>
               <figcaption>
-                <h2><span>{{count}}. </span>{{title}}</h2>
-                <p>{{description}}</p>
-                <p><span>Go to Episode > </span></p>
+                <h2>{{title}}</h2>
+                <p><span>{{description}} </span></p>
+                <p>Go to Episodes <i class="fa fa-arrow-right" aria-hidden="true"></i>
+  </p>
 
-                <a class="" href="{{episodeTgt}}.html">View more</a>
+                <a class="" href="{{episodeTgt}}.html"></a>
               </figcaption>
   </figure>
   </div>
@@ -89,27 +92,7 @@
 </script>
 
 
-<script id="templateBtns" type="text/template">
 
-  <div class="row">
-<div class="col-lg-4 col-md-6">
-  <figure class="effect-kira">
-    <img src="images/{{itemImage}}.jpg" alt="img27"/>
-    <figcaption>
-      <h2><span>{{index}}</span>{{title}} </h2>
-      <blockquote>{{description}}</blockquote>
-
-        <div class="clickFigure"  data-target={{referenceID}} data-title={{title}} href="#"></div>
-      <p>
-        <a data-toggle="tooltip" data-placement="bottom" title="Download Audio" target="_blank" href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}-DL.zip"><i class="fa fa-fw fa fa-download"></i><span>Download Audio</span></a>
-        <a data-toggle="tooltip" data-placement="bottom" title="Download Transcripts" target="_blank" href="http://cdnfiles.laureate.net/2dett4d/managed/{{assets}}.pdf"><i class="fa fa-fw fa-file-text"></i></a>
-
-      </p>
-    </figcaption>
-  </figure>
-</div>
-</div>
-</script>
 
 <a id="url" target="_blank"
 

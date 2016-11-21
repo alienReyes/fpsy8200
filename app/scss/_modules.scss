@@ -23,10 +23,29 @@
     @include header ($episode3C);
 }
 #home{
-    @include header ($darkerblue);
+    @include header (#232323);
+    body {
+      height: 100%;
+      background:#282828; /* fallback for old browsers */
+      background-image: url("/images/bg_index.jpg");
+      background-size: cover;
+    }
 }
 
+.vidLinks {
+  margin: 0 0.5em;
+	color: white!important;
+  opacity: 0.4;
+  font-size: 1.1rem;
+  -webkit-transition: opacity 0.35s;
+ transition: opacity 0.35s;
+  &:hover {
+    color: white!important;
+    opacity:1;
+  }
 
+
+}
 
 /* item is invisible, but used for layout */
 
@@ -219,7 +238,7 @@ display: block;
         position: relative;
         display: block;
         min-height: 100%;
-        max-width: 100%;
+        max-width:350px;
         opacity: 1;
         -webkit-transition: opacity 0.35s,-webkit-transform 0.35s ;
         transition: opacity 0.35s, transform 0.35s;
@@ -243,6 +262,12 @@ display: block;
           font-size: 1.6rem;
         	font-weight: 800;
         }
+
+
+@media screen\0 {
+  opacity:1;
+}
+
       }
 
         h2  {
@@ -273,6 +298,10 @@ display: block;
       	white-space: nowrap;
       	font-size: 0;
       	opacity: 0;
+        @media screen\0 {
+          opacity:.1;
+           background: rgba(0, 0, 0, 0.1);
+        }
       }
       &:hover {
         p {
@@ -288,3 +317,7 @@ display: block;
       }
 
     }
+
+
+
+//disable figure

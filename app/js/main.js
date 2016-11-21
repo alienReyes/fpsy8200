@@ -2,19 +2,23 @@ $ = jQuery.noConflict();
 window.Modernizr = {};
 var currRefId;
 var pStatus;
+var rdyFlag=false;
 
 var   cdnBasePath= "https://kalmedia.laureate.net/emb/";
 var assestsPath="http://cdnfiles.laureate.net/2dett4d/managed/"
 
 
 function jsCallbackReady(objectId) {
-    console.log(objectId + " is ready!!");
+    //console.log(objectId + " is ready!!");
+  fdyFlag=true;
     window.kdp = document.getElementById(objectId);
+    $('figure').css("opacity",1);
+    $('figure').css("pointer-events",'auto');
 
 
     kdp.kBind("mediaReady.init", function() {
         $('.totalTime').text(timeConversion(kdp.evaluate("{mediaProxy.entry.duration}")));
-        console.log("duration ready: " + kdp.evaluate("{mediaProxy.entry.duration}"));
+      //  console.log("duration ready: " + kdp.evaluate("{mediaProxy.entry.duration}"));
         kdp.kUnbind('.init');
         kdp.kBind('playerUpdatePlayhead', 'videoTimeUpdateHandler');
         kdp.kBind('playerStateChange', 'playerStateHandler');
@@ -55,15 +59,29 @@ $("body").tooltip({
 
 
     $('body').on('click', '.clickFigure', function(e) {
+
+
+
+      e.preventDefault();
       $('figure').removeClass('active')
       $(e.target).parents('figure').addClass('active');
-        e.preventDefault();
+
+          var assets=$(this).data('assets')
+
+      var parentInfo=$(this).parents('figCaption');
+      var vTitle=parentInfo.find('h2').text();
+      captionsTgt='http://cdnfiles.laureate.net/2dett4d/managed/'+assets+'.pdf'
+      audioTgt='http://cdnfiles.laureate.net/2dett4d/managed/'+assets+'-DL.zip'
+      $('#captionsDL').attr('href',captionsTgt);
+        $('#audioDL').attr('href',audioTgt);
+
+
+
+    $('.videoTitle').text(vTitle);
+
         var tgt=$(this).data('target')
-        console.log(tgt)
           var refId=tgt.substr(tgt.lastIndexOf("/") + 1,tgt.length);
-          console.log('refId:  '+refId)
         if (refId == currRefId) {
-            console.log(e.target)
             playPauseHandler();
         } else {
             $('.clicked').removeClass('clicked')
@@ -71,9 +89,10 @@ $("body").tooltip({
                 "referenceId": refId
             });
             currRefId = refId;
-
                 $('.coverImg--container').hide('300');
-              $('.videoContainer').show('300');
+              $('.videoContainer').show('300', function (){
+                   $('html,body').animate({scrollTop:'#top'}, 500);
+              });
 
         }
         $(e.target).toggleClass('clicked')
@@ -85,7 +104,7 @@ $("body").tooltip({
 
 
 function playerReadyHandler(e) {
-    console.log(e + '<<Im readyy')
+  //  console.log(e + '<<Im readyy')
 }
 
 
